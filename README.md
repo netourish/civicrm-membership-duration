@@ -23,4 +23,4 @@ If there is a change in the membership duration during editing the membership, t
 
 ## License
 Copyright © 2018 [Koka Prdeep Kumar](https://github.com/netourish). 
-Licensed under the [GNU Affero Public License 3.0](https://github.com/netourish)
+Licensed under the [GNU Affero Public License 3.0](https://github.com/netourish/civicrm-membership-duration/blob/master/LICENSE.txt)
