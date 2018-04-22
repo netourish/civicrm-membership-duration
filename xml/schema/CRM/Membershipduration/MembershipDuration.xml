@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Membershipduration</base>
+  <class>MembershipDuration</class>
+  <name>civicrm_membership_duration</name>
+  <comment>FIXME</comment>
+  <add>4.4</add>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique MembershipDuration ID</comment>
+    <add>4.4</add>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+  <field>
+    <name>contact_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact</comment>
+    <add>4.4</add>
+  </field>
+  <foreignKey>
+    <name>contact_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>membership_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Membership</comment>
+    <add>4.4</add>
+  </field>
+  <foreignKey>
+    <name>membership_id</name>
+    <table>civicrm_membership</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  </field>
+    <field>
+    <name>contribution_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contribution</comment>
+    <add>4.4</add>
+  </field>
+  <foreignKey>
+    <name>contribution_id</name>
+    <table>civicrm_contribution</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>start_date</name>
+    <uniqueName>membership_duration_start_date</uniqueName>
+    <title>Membership Duration Start Date</title>
+    <type>date</type>
+    <import>true</import>
+    <comment>Beginning of membership duration.</comment>
+    <add>4.4</add>
+  </field>
+  <field>
+    <name>end_date</name>
+    <uniqueName>membership_duration_end_date</uniqueName>
+    <title>Membership Duration End Date</title>
+    <type>date</type>
+    <import>true</import>
+    <comment>Membership period expire date.</comment>
+    <add>4.4</add>
+  </field>
+</table>
