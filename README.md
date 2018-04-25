@@ -16,11 +16,17 @@ This extenssion hooks into either membership or membership payment posts and pre
 
 ## Assumptions
 
+As the dates can be of any format, but there is some validation by Civicrm core when submiting, so only null validation done for it.
+
+In case of Life time membership as there will be no end date so in this case the end date will be empty.
+
 If there is a change in the membership duration during editing the membership, then as there is no contribution id posted in, so it will fetch the last contribution id which was  done for this memebrship.
+
+Currently on renewing a membership the start date is not changed it still holds the date when the membership was started, here on renewal the start date of the membership duration will be the date on which renewal is done.
 
 ## Authors
 - [Koka Prdeep Kumar]
 
 ## License
 Copyright © 2018 [Koka Prdeep Kumar](https://github.com/netourish). 
-Licensed under the [GNU Affero Public License 3.0](https://github.com/netourish/civicrm-membership-duration/blob/master/LICENSE.txt)
+Licensed under the [GNU Affero Public License 3.0](https://github.com/netourish/membershipduration/blob/master/LICENSE.txt)
